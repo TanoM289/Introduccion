@@ -2,124 +2,94 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mi Servicio Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ariel Santiago Márquez Valle - Servicios Web</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
     }
-    header {
-      background-color: #c72d2d;
-      color: white;
-      padding: 20px;
+    body {
+      animation: rainbow 20s linear infinite;
+      color: #fff;
       text-align: center;
+    }
+    @keyframes rainbow {
+      0% { background-color: #ff0000; }
+      20% { background-color: #ffa500; }
+      40% { background-color: #ffff00; }
+      60% { background-color: #008000; }
+      80% { background-color: #0000ff; }
+      100% { background-color: #4b0082; }
     }
     .container {
-      padding: 20px;
       max-width: 900px;
       margin: auto;
-      background-color: white;
+      padding: 2rem;
     }
-    h1, h2 {
-      color: #007BFF;
+    .card {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      padding: 1.5rem;
+      margin: 1rem auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
-    .paquete {
-      border: 1px solid #ddd;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-left: 5px solid #007BFF;
+    h1, h2, p {
+      margin-bottom: 1rem;
     }
-    .contacto {
-      text-align: center;
-      margin-top: 30px;
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
     }
-    .btn {
-      background-color: #28a745;
-      color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 5px;
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel .card {
+      scroll-snap-align: center;
+      flex: 0 0 80%;
+    }
+    a.whatsapp {
       display: inline-block;
-      margin-top: 10px;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #eee;
-      margin-top: 30px;
-      font-size: 0.9em;
+      background: #25d366;
+      padding: 10px 20px;
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>¡Hola! Soy Santiago</h1>
-    <p>Diseño páginas web sencillas, rápidas y económicas para pequeños negocios.</p>
-  </header>
-
   <div class="container">
-    
-    <h2>Mis Paquetes de Servicio</h2>
+    <h1>Ariel Santiago Márquez Valle</h1>
+    <p>Estudiante de preparatoria y diseñador semi profesional de páginas web básicas y funcionales</p>
 
-    <div class="paquete">
-      <h3>🟢 Paquete Básico – $1,500 MXN</h3>
-      <ul>
-        <li>Página web simple (1 a 3 páginas)</li>
-        <li>Diseño básico y responsivo</li>
-        <li>Formulario de contacto</li>
-        <li>Integración de redes sociales</li>
-      </ul>
-      <p><strong>Entrega:</strong> 2-3 días | <strong>Soporte:</strong> 1 semana</p>
+    <h2>Paquetes disponibles</h2>
+    <div class="carousel">
+      <div class="card">
+        <h3>Paquete Básico Escolar – $3,000 MXN</h3>
+        <p>- Página de presentación sencilla<br>- HTML y CSS<br>- Botón de WhatsApp<br>- Publicada gratis en GitHub Pages</p>
+      </div>
+      <div class="card">
+        <h3>Paquete Mejorado – $4,500 MXN</h3>
+        <p>- Sitio con 3 secciones<br>- Formulario de contacto<br>- Mapa de Google integrado<br>- Diseño responsivo</p>
+      </div>
+      <div class="card">
+        <h3>Paquete Semi Profesional – $6,500 MXN</h3>
+        <p>- Sitio con hasta 5 secciones<br>- Menú digital o galería<br>- Formularios con PHP<br>- Estilo moderno con Bootstrap</p>
+      </div>
+      <div class="card">
+        <h3>Paquete Profesional Estudiantil – $9,000 MXN</h3>
+        <p>- Página completa con 7 secciones<br>- Sistema de login y registro<br>- Dashboard<br>- Funciones con JSON y React básico</p>
+      </div>
     </div>
 
-    <div class="paquete">
-      <h3>🟡 Paquete Estándar – $2,500 MXN</h3>
-      <ul>
-        <li>Sitio web dinámico (hasta 6 páginas)</li>
-        <li>Galería de fotos o productos</li>
-        <li>Diseño personalizado sencillo</li>
-        <li>Optimización básica SEO</li>
-      </ul>
-      <p><strong>Entrega:</strong> 5-7 días | <strong>Soporte:</strong> 2 semanas</p>
-    </div>
-
-    <div class="paquete">
-      <h3>🔵 Tienda Online – $3,500 MXN</h3>
-      <ul>
-        <li>Tienda online básica (hasta 10 productos)</li>
-        <li>Botones de WhatsApp o carrito de compra</li>
-        <li>Diseño moderno y adaptativo</li>
-        <li>Integración con PayPal o MercadoPago (opcional)</li>
-      </ul>
-      <p><strong>Entrega:</strong> 10-12 dias | <strong>Soporte:</strong> 1 mes</p>
-    </div>
-
-    <div class="paquete">
-      <h3>⭐ Personalizado – $5,000 MXN</h3>
-      <ul>
-        <li>Web diseñada según tus necesidades</li>
-        <li>Funciones extra (formulario avanzado, calendario, etc.)</li>
-        <li>Asesoría durante el proceso</li>
-        <li>Diseño único y ajustado a tu marca</li>
-      </ul>
-      <p><strong>Entrega:</strong> 15-18 dias | <strong>Soporte:</strong> 1 mes</p>
-    </div>
-
-    <div class="contacto">
-      <h2>¿Quieres comenzar tu proyecto?</h2>
-      <a href="https://wa.me/6624445568"  target="_blank" class="btn">Contáctame por WhatsApp</a>
-    </div>
-
+    <a class="whatsapp" href="https://wa.me/526624445568" target="_blank">Contáctame por WhatsApp</a>
   </div>
-
-  <footer>
-    &copy; 2025 Santiago | Sitio creado con HTML y alojado gratis en GitHub Pages
-  </footer>
-
 </body>
 </html>
+
